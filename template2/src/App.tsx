@@ -1,45 +1,24 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import Header from "./components/Header";
+import Layout from "./components/Layout";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import PageOne from "./pages/PageOne";
+import PageTwo from "./pages/PageTwo";
+import PageThree from "./pages/PageThree";
+import PageCTA from "./pages/PageCTA";
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  )
+	return (
+		<Layout>
+			<Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/page-one" element={<PageOne/>}/>
+        <Route path="/page-two" element={<PageTwo/>}/>
+        <Route path="/page-three" element={<PageThree/>}/>
+        <Route path="/page-cta" element={<PageCTA/>}/>
+      </Routes>
+		</Layout>
+	);
 }
 
-export default App
+export default App;
