@@ -1,4 +1,3 @@
-import React, { PropsWithChildren } from "react";
 import "../styles/Navbar.css"
 
 const Navbar = () => {
