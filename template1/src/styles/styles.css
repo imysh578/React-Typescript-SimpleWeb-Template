@@ -1,0 +1,8 @@
+/* Variables for css */
+@import 'variables.css';
+
+@import 'common.css';
+
+/* Components styles */
+@import 'App.css';
+@import 'Navbar.css';

@@ -1,0 +1,42 @@
+.nav {
+  background: var(--primary-color);
+  color: var(--nav-text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1rem;
+  font-size: 1rem;
+  height: 3rem;
+}
+
+.logo {
+  font-size: 1.3rem;
+}
+
+.nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: inherit;
+  padding: 0.3rem;
+}
+
+.nav li {
+  padding: 0.3rem;
+  border-radius: 0.4rem;
+}
+
+.nav li.active {
+  background-color: var(--active-color);
+  color: var(--text-color);
+}
+.nav li:hover {
+  background-color: var(--hover-color);
+  color: var(--text-color);
+}
+

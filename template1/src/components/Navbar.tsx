@@ -4,11 +4,11 @@ const Navbar = () => {
 	return (
 		<nav className="nav">
 			<Link to="/" className="logo">
-				Luniverse
+				Logo
 			</Link>
 			<ul>
-				<CustomLink to="/pricing">Pricing</CustomLink>
-				<CustomLink to="/about">About</CustomLink>
+				<CustomLink to="/page1">Page1</CustomLink>
+				<CustomLink to="/page2">Page2</CustomLink>
 			</ul>
 		</nav>
 	);
