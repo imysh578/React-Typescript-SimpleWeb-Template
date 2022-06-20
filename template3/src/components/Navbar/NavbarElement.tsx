@@ -3,7 +3,7 @@ import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 
 export const Nav = styled.nav`
-	background: #000;
+	background: ${({ theme }) => theme.color.black};
 	height: 5rem;
 	/* margin-top: -5rem; */
 	display: flex;
@@ -15,14 +15,14 @@ export const Nav = styled.nav`
 	z-index: 10;
 
 	@media screen and (max-width: 960px) {
-		transition: 0.8s ease all;
+		transition: all 0.8s ease;
 	}
 `;
 
 export const NavbarComponent = styled.div`
 	display: flex;
 	justify-content: space-between;
-	height: 80px;
+	height: 5rem;
 	z-index: 1;
 	width: 100%;
 	padding: 0 1.5rem;
@@ -30,7 +30,7 @@ export const NavbarComponent = styled.div`
 `;
 
 export const NavLog = styled(LinkR)`
-	color: #fff;
+	color: ${({theme}) => theme.color.light};
 	justify-self: flex-start;
 	cursor: pointer;
 	font-size: 1.5rem;
@@ -42,45 +42,74 @@ export const NavLog = styled(LinkR)`
 `;
 
 export const MobileIcon = styled.div`
-  display: none;
+	display: none;
 
-  @media screen and (max-width: 768px){
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.8rem;
-    cursor: pointer;
-  }
+	@media ${({theme}) => theme.device.tablet} {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translate(-100%, 60%);
+		font-size: 1.8rem;
+		cursor: pointer;
+		color: ${({theme}) => theme.color.light};
+	}
 `;
 
 export const NavMenu = styled.ul`
-  display: flex;
-  align-items: center;
-  list-style: none;
-  text-align: center;
-  margin-right: -22px;
+	display: flex;
+	align-items: center;
+	list-style: none;
+	text-align: center;
+	margin-right: -22px;
 
-  @media screen and (max-width: 768px) {
-    display:none;
-  }
+	@media ${({theme}) => theme.device.tablet} {
+		display: none;
+	}
 `;
 
 export const NavItem = styled.li`
-  height: 5rem;
+	height: 5rem;
 `;
 
 export const NavLinks = styled(LinkS)`
-  color: #fff;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
-  cursor: pointer;
+	color: ${({theme}) => theme.color.light};
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	padding: 0 1rem;
+	height: 100%;
+	cursor: pointer;
 
-  &.active {
-    border-bottom: 3px solid $primary;
-  }
+	&.active {
+		border-bottom: 3px solid ${({theme}) => theme.color.primary};
+	}
+`;
+
+export const NavBtn = styled.nav`
+	display: flex;
+	align-items: center;
+
+	@media ${({theme}) => theme.device.tablet} {
+		display: none;
+	}
+`;
+
+export const NavBtnLink = styled(LinkR)`
+	border-radius: 50px;
+	background: ${({theme}) => theme.color.primary};
+	white-space: nowrap;
+	padding: 10px 22px;
+	color: ${({theme}) => theme.color.dark};
+	font-size: 1rem;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	text-decoration: none;
+
+	&:hover {
+		transition: all 0.2s ease-in-out;
+		background: ${({theme}) => theme.color.light};
+	}
 `;
