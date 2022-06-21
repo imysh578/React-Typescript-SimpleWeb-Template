@@ -9,7 +9,7 @@ import {
 	NavLinks,
 	NavLog,
 	NavMenu,
-} from "./NavbarElement";
+} from "./styled";
 import { FaBars } from "react-icons/fa";
 
 const Navbar = () => {

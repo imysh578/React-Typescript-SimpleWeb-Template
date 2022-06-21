@@ -79,13 +79,16 @@ export const zIndex = {
   nav: 1,
   navComponent: 10,
   sidebarContainer: 999,
+  heroContainer: 1,
+  heroContent: 3,
 };
 
-const maxWidth = {
-  xs: '375px',
+export const maxWidth = {
+  xs: '480px',
   sm: '768px',
   md: '960px',
   lg: '1024px',
+  xl: '1200px',
 };
 
 export const breakpoint = {
@@ -93,5 +96,6 @@ export const breakpoint = {
   sm: `screen and (max-width: ${maxWidth.sm})`,
   md: `screen and (max-width: ${maxWidth.md})`,
   lg: `screen and (max-width: ${maxWidth.lg})`,
+  xl: `screen and (max-width: ${maxWidth.xl})`,
 };
 
