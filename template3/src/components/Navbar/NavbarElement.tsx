@@ -12,9 +12,9 @@ export const Nav = styled.nav`
 	font-size: 1rem;
 	position: sticky;
 	top: 0;
-	z-index: 10;
+	z-index: ${({theme}) => theme.zIndex.nav};
 
-	@media screen and (max-width: 960px) {
+	@media ${({theme}) => theme.breakpoint.md} {
 		transition: all 0.8s ease;
 	}
 `;
@@ -23,7 +23,7 @@ export const NavbarComponent = styled.div`
 	display: flex;
 	justify-content: space-between;
 	height: 5rem;
-	z-index: 1;
+	z-index: ${({theme}) => theme.zIndex.navComponent};
 	width: 100%;
 	padding: 0 1.5rem;
 	max-width: 1100px;
@@ -44,7 +44,7 @@ export const NavLog = styled(LinkR)`
 export const MobileIcon = styled.div`
 	display: none;
 
-	@media ${({theme}) => theme.device.tablet} {
+	@media ${({theme}) => theme.breakpoint.md} {
 		display: block;
 		position: absolute;
 		top: 0;
@@ -63,7 +63,7 @@ export const NavMenu = styled.ul`
 	text-align: center;
 	margin-right: -22px;
 
-	@media ${({theme}) => theme.device.tablet} {
+	@media ${({theme}) => theme.breakpoint.md} {
 		display: none;
 	}
 `;
@@ -90,7 +90,7 @@ export const NavBtn = styled.nav`
 	display: flex;
 	align-items: center;
 
-	@media ${({theme}) => theme.device.tablet} {
+	@media ${({theme}) => theme.breakpoint.md} {
 		display: none;
 	}
 `;

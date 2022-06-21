@@ -76,18 +76,22 @@ export const mixins = {
 };
 
 export const zIndex = {
-  gnbLevel: 500,
+  nav: 1,
+  navComponent: 10,
+  sidebarContainer: 999,
 };
 
-const deviceSizes = {
-  mobile: '375px',
-  tablet: '768px',
-  pc: '1024px',
+const maxWidth = {
+  xs: '375px',
+  sm: '768px',
+  md: '960px',
+  lg: '1024px',
 };
 
-export const device = {
-  mobile: `screen and (max-width: ${deviceSizes.mobile})`,
-  tablet: `screen and (max-width: ${deviceSizes.tablet})`,
-  pc: `screen and (max-width: ${deviceSizes.pc})`,
+export const breakpoint = {
+  xs: `screen and (max-width: ${maxWidth.xs})`,
+  sm: `screen and (max-width: ${maxWidth.sm})`,
+  md: `screen and (max-width: ${maxWidth.md})`,
+  lg: `screen and (max-width: ${maxWidth.lg})`,
 };
 

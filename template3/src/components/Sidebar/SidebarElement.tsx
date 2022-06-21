@@ -1,14 +1,14 @@
 import styled from "styled-components";
-import { FaTimes } from "react-icons/fa";
 import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
+import { FaTimes } from "react-icons/fa";
 
 export const SidebarContainer = styled.div`
 	position: fixed;
-	z-index: 999;
+	z-index: ${({theme}) => theme.zIndex.sidebarContainer};
 	width: 100%;
 	height: 100%;
-	background: #0d0d0d;
+	background: ${({theme}) => theme.color.dark};
 	display: grid;
 	align-items: center;
 	top: 0;
@@ -42,7 +42,7 @@ export const SidebarMenu = styled.ul`
   grid-template-rows: repeat(6, 5rem);
   text-align: center;
 
-  @media ${({ theme }) => theme.device.mobile} {
+  @media ${({ theme }) => theme.breakpoint.sm} {
     grid-template-rows: repeat(6, 5rem)
   };
 `;
