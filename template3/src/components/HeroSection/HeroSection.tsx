@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Video from "../../videos/video.mp4";
-import { Button } from "../BoilerPlate/Button";
+import ButtonScroll from "../BoilerPlate/ButtonScroll";
 
 import {
 	ArrowForward,
@@ -31,9 +31,9 @@ const HeroSection = () => {
 					<HeroH1>Simple Website</HeroH1>
 					<HeroP>using React, Typescript, and styled-Component</HeroP>
 					<HeroBtnWrapper>
-						<Button to="signup" onMouseEnter={onHover} onMouseLeave={onHover} primary="true" dark="true">
+						<ButtonScroll to="signup" onMouseEnter={onHover} onMouseLeave={onHover} primary="true" dark="true" type="">
 							Get Started {hover ? <ArrowForward /> : <ArrowRight />}
-						</Button>
+						</ButtonScroll>
 					</HeroBtnWrapper>
 				</HeroContent>
 			</HeroContainer>

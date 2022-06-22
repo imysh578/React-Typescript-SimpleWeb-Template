@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 import { Link as LinkS } from 'react-scroll';
 
-interface Button {
-  primary: string | undefined;
-  big: string | undefined;
-  dark: string | undefined;
-  fontBig: string | undefined;
+interface ButtonScroll {
+  primary?: string;
+  big?: string;
+  dark?: string;
+  fontBig?: string;
 }
 
-export const Button = styled(LinkS)<Button>`
+const ButtonScroll = styled(LinkS)<ButtonScroll>`
   border-radius: 50px;
-  background: ${({primary}) => (primary ? '#01BF71' : '#010606')};
+  background: ${({primary}) => (primary ? '#4284ff' : '#010606')};
   white-space: nowrap;
   padding: ${({big}) => (big ? '14px 48px' : '12px 30px')};
   color: ${({dark}) => (dark ? '#010606' : '#fff')};
@@ -29,3 +29,4 @@ export const Button = styled(LinkS)<Button>`
   }
 `;
 
+export default ButtonScroll

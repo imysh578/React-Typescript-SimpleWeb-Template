@@ -3,7 +3,11 @@ import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 import { FaTimes } from "react-icons/fa";
 
-export const SidebarContainer = styled.div`
+interface SidebarContainer {
+  isOpen?: boolean;
+}
+
+export const SidebarContainer = styled.div<SidebarContainer>`
 	position: fixed;
 	z-index: ${({theme}) => theme.zIndex.sidebarContainer};
 	width: 100%;
