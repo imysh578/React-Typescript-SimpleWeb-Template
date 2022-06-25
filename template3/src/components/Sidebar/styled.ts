@@ -61,6 +61,7 @@ export const SidebarLink = styled(LinkS)`
   transition: 0.2s ease-in-out;
   text-decoration: none;
   color: ${({ theme }) => theme.color.white};
+  cursor: pointer;
 
   &:hover {
     color: ${({ theme }) => theme.color.primary};

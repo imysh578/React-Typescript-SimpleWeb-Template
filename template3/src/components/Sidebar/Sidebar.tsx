@@ -1,18 +1,18 @@
-import React from "react";
+import React, { FC } from "react";
 import { CloseIcon, Icon, SidebarContainer, SidebarLink, SidebarMenu, SidebarRoute, SidebarWrapper, SideBtnWrap } from "./styled";
 
-const Sidebar = () => {
+const Sidebar: FC<{isOpen: boolean, toggle: VoidFunction}> = ({isOpen, toggle}) => {
 	return (
-		<SidebarContainer>
-			<Icon>
+		<SidebarContainer isOpen={isOpen}>
+			<Icon onClick={toggle}>
 				<CloseIcon />
 			</Icon>
 			<SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="page1">Page1</SidebarLink>
-          <SidebarLink to="page2">Page2</SidebarLink>
-          <SidebarLink to="page3">Page3</SidebarLink>
-          <SidebarLink to="signup">Sign Up</SidebarLink>
+          <SidebarLink to="section1" offset={-80} onClick={toggle}>Section1</SidebarLink>
+          <SidebarLink to="section2" offset={-80} onClick={toggle}>Section2</SidebarLink>
+          <SidebarLink to="section3" offset={-80} onClick={toggle}>Section3</SidebarLink>
+          <SidebarLink to="signup" offset={-80} onClick={toggle}>Sign Up</SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
           <SidebarRoute to='/signin'>Sign In</SidebarRoute>

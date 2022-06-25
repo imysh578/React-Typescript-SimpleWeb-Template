@@ -2,10 +2,11 @@ import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 
-export const Nav = styled.nav`
-	background: ${({ theme }) => theme.color.black};
+export const Nav = styled.nav<{scrollNav: boolean}>`
+	background: ${({ scrollNav, theme }) => scrollNav ? theme.color.dark : 'transparent'};
 	height: 5rem;
 	display: flex;
+	margin-top: -5rem;
 	justify-content: center;
 	align-items: center;
 	font-size: 1rem;

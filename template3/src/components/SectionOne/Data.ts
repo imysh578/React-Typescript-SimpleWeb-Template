@@ -1,4 +1,4 @@
-export interface sectionOneDataType {
+export interface sectionDataType {
   id: string,
   lightBg: boolean,
   lightText: boolean,
@@ -17,7 +17,7 @@ export interface sectionOneDataType {
 }
 
 export const sectionOneData = {
-  id: 'page1',
+  id: 'section1',
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
@@ -28,38 +28,6 @@ export const sectionOneData = {
   imgStart: false,
   img: "img1",
   alt: 'section1',
-  dark: false,
-  primary: false,
-  darkText: true,
-}
-export const sectionOneData2 = {
-  id: 'page2',
-  lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
-  topLine: 'Section two',
-  headLine: 'This is Headline',
-  description: "This is Description",
-  buttonLabel: "Button name",
-  imgStart: true,
-  img: "img2",
-  alt: 'section2',
-  dark: true,
-  primary: true,
-  darkText: false,
-}
-export const sectionOneData3 = {
-  id: 'page3',
-  lightBg: true,
-  lightText: false,
-  lightTextDesc: false,
-  topLine: 'Section three',
-  headLine: 'This is Headline',
-  description: "This is Description",
-  buttonLabel: "Button name",
-  imgStart: false,
-  img: "img3",
-  alt: 'section3',
   dark: false,
   primary: false,
   darkText: true,

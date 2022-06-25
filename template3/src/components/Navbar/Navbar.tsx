@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
 	MobileIcon,
 	Nav,
@@ -11,35 +11,80 @@ import {
 	NavMenu,
 } from "./styled";
 import { FaBars } from "react-icons/fa";
+import { IconContext } from "react-icons";
+import { animateScroll } from "react-scroll";
 
-const Navbar = () => {
+const Navbar: React.FC<{ toggle: VoidFunction }> = ({ toggle }) => {
+	const [scrollNav, setScrollNav] = useState(false);
+
+	const changeNav = () => {
+		if (window.scrollY >= 80) {
+			setScrollNav(true);
+		} else {
+			setScrollNav(false);
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener("scroll", changeNav);
+	}, []);
+
+	const toggleHome = () => {
+		animateScroll.scrollToTop();
+	};
+
 	return (
 		<>
-			<Nav>
-				<NavbarComponent>
-					<NavLog to="/">SOKURI</NavLog>
-					<MobileIcon>
-						<FaBars />
-					</MobileIcon>
-					<NavMenu>
-						<NavItem>
-							<NavLinks to="page1" offset={-80}>Page1</NavLinks>
-						</NavItem>
-						<NavItem>
-							<NavLinks to="page2" offset={-80}>Page2</NavLinks>
-						</NavItem>
-						<NavItem>
-							<NavLinks to="page3" offset={-80}>Page3</NavLinks>
-						</NavItem>
-						<NavItem>
-							<NavLinks to="signup" offset={-80}>Sign Up</NavLinks>
-						</NavItem>
-					</NavMenu>
-          <NavBtn>
-            <NavBtnLink to="/signin">Sign In</NavBtnLink>
-          </NavBtn>
-				</NavbarComponent>
-			</Nav>
+			<IconContext.Provider value={{ color: "#fff" }}>
+				<Nav scrollNav={scrollNav}>
+					<NavbarComponent>
+						<NavLog to="/" onClick={toggleHome}>
+							SOKURI
+						</NavLog>
+						<MobileIcon onClick={toggle}>
+							<FaBars />
+						</MobileIcon>
+						<NavMenu>
+							<NavItem>
+								<NavLinks
+									to="section1"
+									smooth={true}
+									duration={500}
+									spy={true}
+									offset={-80}
+								>
+									Section1
+								</NavLinks>
+							</NavItem>
+							<NavItem>
+								<NavLinks
+									to="section2"
+									smooth={true}
+									duration={500}
+									spy={true}
+									offset={-80}
+								>
+									Section2
+								</NavLinks>
+							</NavItem>
+							<NavItem>
+								<NavLinks
+									to="signup"
+									smooth={true}
+									duration={500}
+									spy={true}
+									offset={-80}
+								>
+									Sign Up
+								</NavLinks>
+							</NavItem>
+						</NavMenu>
+						<NavBtn>
+							<NavBtnLink to="/signin">Sign In</NavBtnLink>
+						</NavBtn>
+					</NavbarComponent>
+				</Nav>
+			</IconContext.Provider>
 		</>
 	);
 };

@@ -1,1 +1,1 @@
-export * from "./SectionOne";
+export { default } from "./SectionOne";

@@ -1,48 +1,48 @@
 import React from "react";
 import {
-	SectionTwoCard,
-	SectionTwoContainer,
-	SectionTwoH1,
-	SectionTwoH2,
-	SectionTwoImg,
-	SectionTwoImgWrap,
-	SectionTwoP,
-	SectionTwoWrapper,
+	Card,
+	Container,
+	H1,
+	H2,
+	Img,
+	ImgWrap,
+	P,
+	Wrapper,
 } from "./styled";
 
 const SectionTwo = () => {
 	return (
-		<SectionTwoContainer>
-			<SectionTwoH1>Section Two</SectionTwoH1>
-			<SectionTwoWrapper>
+		<Container id="section2">
+			<H1>Section Two</H1>
+			<Wrapper>
 				{/* Card1 */}
-				<SectionTwoCard>
-					<SectionTwoImgWrap>
-						<SectionTwoImg src="/images/img4.svg" />
-					</SectionTwoImgWrap>
-					<SectionTwoH2>H2 Headline</SectionTwoH2>
-					<SectionTwoP>Description</SectionTwoP>
-				</SectionTwoCard>
+				<Card>
+					<ImgWrap>
+						<Img src="/images/img4.svg" />
+					</ImgWrap>
+					<H2>Headline</H2>
+					<P>Description</P>
+				</Card>
 
 				{/* Card2 */}
-				<SectionTwoCard>
-					<SectionTwoImgWrap>
-						<SectionTwoImg src="/images/img5.svg" />
-					</SectionTwoImgWrap>
-					<SectionTwoH2>H2 Headline</SectionTwoH2>
-					<SectionTwoP>Description</SectionTwoP>
-				</SectionTwoCard>
+				<Card>
+					<ImgWrap>
+						<Img src="/images/img5.svg" />
+					</ImgWrap>
+					<H2>Headline</H2>
+					<P>Description</P>
+				</Card>
 
 				{/* Card3 */}
-				<SectionTwoCard>
-					<SectionTwoImgWrap>
-						<SectionTwoImg src="/images/img6.svg" />
-					</SectionTwoImgWrap>
-					<SectionTwoH2>H2 Headline</SectionTwoH2>
-					<SectionTwoP>Description</SectionTwoP>
-				</SectionTwoCard>
-			</SectionTwoWrapper>
-		</SectionTwoContainer>
+				<Card>
+					<ImgWrap>
+						<Img src="/images/img6.svg" />
+					</ImgWrap>
+					<H2>Headline</H2>
+					<P>Description</P>
+				</Card>
+			</Wrapper>
+		</Container>
 	);
 };
 

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-interface SectionOneContainer {
+interface Container {
 	lightBg?: boolean;
 }
 
-interface SectionOneRow {
+interface Row {
 	imgStart?: boolean;
 }
 
@@ -16,7 +16,8 @@ interface Subtitle {
 	darkText?: boolean;
 }
 
-export const SectionOneContainer = styled.div<SectionOneContainer>`
+export const Container = styled.div<Container>`
+	min-height: calc(100vh - 5rem);
 	color: ${({ theme }) => theme.color.white};
 	background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#010606")};
 
@@ -25,10 +26,10 @@ export const SectionOneContainer = styled.div<SectionOneContainer>`
 	}
 `;
 
-export const SectionOneWrapper = styled.div`
+export const Wrapper = styled.div`
 	display: grid;
 	z-index: ${({ theme }) => theme.zIndex.infoWrapper};
-	height: calc(100vh - 5rem);
+	min-height: calc(100vh - 5rem);
 	width: 100%;
 	max-width: 1100px;
 	margin-right: auto;
@@ -37,7 +38,7 @@ export const SectionOneWrapper = styled.div`
 	justify-content: center;
 `;
 
-export const SectionOneRow = styled.div<SectionOneRow>`
+export const Row = styled.div<Row>`
 	display: grid;
 	grid-auto-columns: minmax(auto, 1fr);
 	align-items: center;
@@ -106,8 +107,7 @@ export const BtnWrap = styled.div`
 `;
 
 export const ImgWrap = styled.div`
-  max-width: 555px;
-  height: 100%;
+  max-width: 100%;
 `;
 
 export const Img = styled.img`

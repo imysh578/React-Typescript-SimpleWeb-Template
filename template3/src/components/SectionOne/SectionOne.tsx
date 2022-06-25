@@ -1,6 +1,6 @@
 import React from "react";
 import ButtonScroll from "../BoilerPlate/ButtonScroll";
-import { sectionOneDataType } from "./Data";
+import { sectionDataType } from "./Data";
 import {
 	BtnWrap,
 	Column1,
@@ -8,15 +8,15 @@ import {
 	Heading,
 	Img,
 	ImgWrap,
-	SectionOneContainer,
-	SectionOneRow,
-	SectionOneWrapper,
+	Container,
+	Row,
+	Wrapper,
 	Subtitle,
 	TextWrapper,
 	TopLine,
 } from "./styled";
 
-const SectionOne: React.FC<sectionOneDataType> = ({
+const SectionOne: React.FC<sectionDataType> = ({
 	lightBg,
 	id,
 	imgStart,
@@ -34,9 +34,9 @@ const SectionOne: React.FC<sectionOneDataType> = ({
 }) => {
 	return (
 		<>
-			<SectionOneContainer lightBg={lightBg} id={id}>
-				<SectionOneWrapper>
-					<SectionOneRow imgStart={imgStart}>
+			<Container lightBg={lightBg} id={id}>
+				<Wrapper>
+					<Row imgStart={imgStart}>
 						<Column1>
 							<TextWrapper>
 								<TopLine>{topLine}</TopLine>
@@ -63,9 +63,9 @@ const SectionOne: React.FC<sectionOneDataType> = ({
 								<Img src={`/images/${img}.svg`} alt={alt} />
 							</ImgWrap>
 						</Column2>
-					</SectionOneRow>
-				</SectionOneWrapper>
-			</SectionOneContainer>
+					</Row>
+				</Wrapper>
+			</Container>
 		</>
 	);
 };
