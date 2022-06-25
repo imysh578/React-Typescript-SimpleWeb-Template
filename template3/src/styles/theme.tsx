@@ -8,7 +8,7 @@ export const color = {
 	dark: "#010606",
 	light: "#eee",
 
-	primary: "#4284ff",
+	primary: "#1366FF",
 	secondary: "#8c8d96",
 	tertiary: "#757575",
 	placeholder: "#BDBDBD",
@@ -80,7 +80,7 @@ export const mixins = {
 };
 
 export const zIndex = {
-	nav: 1,
+	nav: 9,
 	navComponent: 10,
 	sidebarContainer: 999,
 	heroContainer: 1,

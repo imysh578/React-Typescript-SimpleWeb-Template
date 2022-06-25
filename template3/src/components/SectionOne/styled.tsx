@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-interface InfoContainer {
+interface SectionOneContainer {
 	lightBg?: boolean;
 }
 
-interface InfoRow {
-	imgStart?: string;
+interface SectionOneRow {
+	imgStart?: boolean;
 }
 
 interface Heading {
@@ -16,7 +16,7 @@ interface Subtitle {
 	darkText?: boolean;
 }
 
-export const InfoContainer = styled.div<InfoContainer>`
+export const SectionOneContainer = styled.div<SectionOneContainer>`
 	color: ${({ theme }) => theme.color.white};
 	background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#010606")};
 
@@ -25,10 +25,10 @@ export const InfoContainer = styled.div<InfoContainer>`
 	}
 `;
 
-export const InfoWrapper = styled.div`
+export const SectionOneWrapper = styled.div`
 	display: grid;
 	z-index: ${({ theme }) => theme.zIndex.infoWrapper};
-	height: 860px;
+	height: calc(100vh - 5rem);
 	width: 100%;
 	max-width: 1100px;
 	margin-right: auto;
@@ -37,16 +37,16 @@ export const InfoWrapper = styled.div`
 	justify-content: center;
 `;
 
-export const InfoRow = styled.div<InfoRow>`
+export const SectionOneRow = styled.div<SectionOneRow>`
 	display: grid;
 	grid-auto-columns: minmax(auto, 1fr);
 	align-items: center;
 	grid-template-areas: ${({ imgStart }) =>
-		imgStart ? "col2 col1" : "col1 col2"};
+		imgStart ? `"col2 col1"` : `"col1 col2"`};
 
 	@media ${({ theme }) => theme.breakpoint.sm} {
 		grid-template-areas: ${({ imgStart }) =>
-			imgStart ? "col1 col2" : "'col1 col1' 'col2 col2'"};
+			imgStart ? `"col2" "col1"` : `"col1" "col2"`};
 	}
 `;
 

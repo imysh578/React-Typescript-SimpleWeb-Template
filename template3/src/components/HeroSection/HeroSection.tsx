@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Video from "../../videos/video.mp4";
+import Video from "/videos/video.mp4";
 import ButtonScroll from "../BoilerPlate/ButtonScroll";
 
 import {
@@ -23,7 +23,7 @@ const HeroSection = () => {
 
 	return (
 		<>
-			<HeroContainer>
+			<HeroContainer id="home">
 				<HeroBg>
 					<VideoBg autoPlay loop muted src={Video} typeof="video/mp4" />
 				</HeroBg>
@@ -31,7 +31,14 @@ const HeroSection = () => {
 					<HeroH1>Simple Website</HeroH1>
 					<HeroP>using React, Typescript, and styled-Component</HeroP>
 					<HeroBtnWrapper>
-						<ButtonScroll to="signup" onMouseEnter={onHover} onMouseLeave={onHover} primary="true" dark="true" type="">
+						<ButtonScroll
+							to="signup"
+							onMouseEnter={onHover}
+							onMouseLeave={onHover}
+							primary="true"
+							dark="true"
+							type=""
+						>
 							Get Started {hover ? <ArrowForward /> : <ArrowRight />}
 						</ButtonScroll>
 					</HeroBtnWrapper>

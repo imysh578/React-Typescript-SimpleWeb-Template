@@ -23,16 +23,16 @@ const Navbar = () => {
 					</MobileIcon>
 					<NavMenu>
 						<NavItem>
-							<NavLinks to="page1">Page1</NavLinks>
+							<NavLinks to="page1" offset={-80}>Page1</NavLinks>
 						</NavItem>
 						<NavItem>
-							<NavLinks to="page2">Page2</NavLinks>
+							<NavLinks to="page2" offset={-80}>Page2</NavLinks>
 						</NavItem>
 						<NavItem>
-							<NavLinks to="page3">Page3</NavLinks>
+							<NavLinks to="page3" offset={-80}>Page3</NavLinks>
 						</NavItem>
 						<NavItem>
-							<NavLinks to="signup">Sign Up</NavLinks>
+							<NavLinks to="signup" offset={-80}>Sign Up</NavLinks>
 						</NavItem>
 					</NavMenu>
           <NavBtn>

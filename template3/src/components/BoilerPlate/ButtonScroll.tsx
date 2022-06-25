@@ -5,12 +5,13 @@ interface ButtonScroll {
   primary?: string;
   big?: string;
   dark?: string;
+  dark2?: string;
   fontBig?: string;
 }
 
 const ButtonScroll = styled(LinkS)<ButtonScroll>`
   border-radius: 50px;
-  background: ${({primary}) => (primary ? '#4284ff' : '#010606')};
+  background: ${({primary}) => (primary ? '#1366FF' : '#010606')};
   white-space: nowrap;
   padding: ${({big}) => (big ? '14px 48px' : '12px 30px')};
   color: ${({dark}) => (dark ? '#010606' : '#fff')};
@@ -25,7 +26,7 @@ const ButtonScroll = styled(LinkS)<ButtonScroll>`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: ${({primary}) => (primary ? '#fff' : '#01BF1')};
+    background: ${({primary}) => (primary ? '#fff' : '#1366FF')};
   }
 `;
 

@@ -7,7 +7,7 @@ export const HeroContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	padding: 0 2rem;
-	height: 50rem;
+	height: calc( 100vh - 5rem );
 	position: relative;
 	z-index: ${({ theme }) => theme.zIndex.heroContainer};
 
