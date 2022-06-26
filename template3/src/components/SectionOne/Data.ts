@@ -32,3 +32,20 @@ export const sectionOneData = {
   primary: false,
   darkText: true,
 }
+
+export const signupData = {
+  id: 'signup',
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
+  topLine: 'Join Us',
+  headLine: 'This is Headline',
+  description: "This is Description",
+  buttonLabel: "Start Now",
+  imgStart: false,
+  img: "img1",
+  alt: 'signup',
+  dark: false,
+  primary: false,
+  darkText: true,
+}

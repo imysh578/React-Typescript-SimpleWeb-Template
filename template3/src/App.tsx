@@ -1,14 +1,14 @@
 import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
-import Signin from './pages/Signin'
+import SigninPage from './pages/SigninPage'
 
 function App() {
   return (
     <>
       <Routes >
         <Route path='/' element={<Home/>} />
-        <Route path='/signin' element={<Signin/>} />
+        <Route path='/signin' element={<SigninPage/>} />
       </Routes>
     </>
   )

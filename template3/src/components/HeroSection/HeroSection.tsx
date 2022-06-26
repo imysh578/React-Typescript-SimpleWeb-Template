@@ -33,11 +33,14 @@ const HeroSection = () => {
 					<HeroBtnWrapper>
 						<ButtonScroll
 							to="signup"
+							smooth={true}
+							duration={500}
+							spy={true}
+							offset={-80}
 							onMouseEnter={onHover}
 							onMouseLeave={onHover}
 							primary="true"
 							dark="true"
-							type=""
 						>
 							Get Started {hover ? <ArrowForward /> : <ArrowRight />}
 						</ButtonScroll>

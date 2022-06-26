@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import HeroSection from "../components/HeroSection";
-import { sectionOneData } from "../components/SectionOne/Data";
+import { sectionOneData, signupData } from "../components/SectionOne/Data";
 import SectionOne from "../components/SectionOne";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
@@ -24,6 +24,7 @@ const Home = () => {
 			<HeroSection/>
 			<SectionOne {...sectionOneData}/>
 			<SectionTwo/>
+			<SectionOne {...signupData}/>
 
 			<Footer />
 		</>
